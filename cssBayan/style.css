@@ -1,0 +1,41 @@
+
+.container{
+    width: 50vh;
+    margin: 5vh auto;
+}
+input{
+    width: 0;
+    height: 0;
+}
+.img{
+    display: none;
+    width: 40vh;
+}
+.list{
+    list-style-type: none;
+}
+.list__item input:checked ~ .img{
+    display: block;
+}
+/* .list__item input:checked ~ .label{
+    color: blue;
+    font-weight: bold;
+} */
+
+input[type=checkbox]:checked + label{
+    color: blue;
+    font-weight: bold;
+}
+.label{
+    cursor: pointer;
+    display: block;
+    padding: 15px 15px;
+    color: black;
+}
+.label:hover{
+    color: blue;
+    font-weight: bold;
+}
+.label:hover ~.img{
+    display: block;
+}
