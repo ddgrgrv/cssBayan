@@ -1,1 +1,1 @@
-# https://${ddgrgrv}.github.io/cssBayan/cssBayan/index.html
+# https://ddgrgrv.github.io/cssBayan/cssBayan/index.html
