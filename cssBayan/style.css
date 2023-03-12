@@ -1,0 +1,135 @@
+body{
+    font-family: 'Orbitron', sans-serif;
+    background: rgb(21,8,247);
+    background: linear-gradient(90deg, rgba(21,8,247,1) 0%, rgba(26,196,71,1) 35%, rgba(255,0,0,1) 100%);
+    margin: 0;
+    padding: 0;
+}
+.title{
+    font-size: 8vh;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+input{
+    width: 0;
+    height: 0;
+}
+.img{
+    width: 0;
+    opacity: 1;
+    transition: width 0.3s linear;
+}
+.list{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.list__item{
+    margin-bottom: 10px;
+}
+.list__item input:checked ~ .label{
+    color: blue;
+    font-weight: bold;
+}
+.label:hover:after{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 30%;
+    right: 15px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 2vw 1vw 0 1vw;
+    border-color:blue transparent transparent transparent;
+}
+.list__item input:checked ~ .label::after{
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 30%;
+    right: 15px;
+    border-style: solid;
+    border-width: 0 1vw 2vw 1vw;
+    border-color: transparent transparent blue transparent;
+}
+.label{
+    font-size: 5vh;
+    cursor: pointer;
+    display: block;
+    color: black;
+    position: relative;
+    margin-bottom: 5px;
+    transition: all 0.3s linear;
+}
+.label:hover{
+    color: blue;
+    font-weight: bold;
+}
+.label:active{
+    color: red;
+    font-weight: bold;
+}
+.label:active:after{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 30%;
+    right: 15px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 2vw 1vw 0 1vw;
+    border-color:red transparent transparent transparent;
+}
+
+@media (min-width:320px){
+    .container {
+        width: 70vw;
+        margin: 2vw auto;
+    }
+    .list__item input:checked ~ .img{
+        width: 70vw;
+    }
+    .label:hover ~.img{
+        width: 70vw;
+    }
+    .label{
+        font-size: 5vh;
+    }
+}
+@media (min-width:820px){
+    .container{
+        width: 60vw;
+        margin: 5vw auto;
+    }
+    .list__item input:checked ~ .img{
+        width: 50vw;
+    }
+    .label:hover ~.img{
+        width: 50vw;
+    }
+    .label{
+        font-size: 5vh;
+    }
+}
+@media (min-width:1920px){
+    .container{
+        width: 50vw;
+        margin: 5vw auto;
+    }
+    .list__item input:checked ~ .img{
+        width: 40vw;
+    }
+    .label:hover ~.img{
+        width: 40vw;
+    }
+    .label{
+        font-size: 8vh;
+    }
+}
